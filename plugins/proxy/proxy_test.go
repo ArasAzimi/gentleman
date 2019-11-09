@@ -38,7 +38,7 @@ func TestProxyParseError(t *testing.T) {
 	transport := ctx.Client.Transport.(*http.Transport)
 	_, err := transport.Proxy(ctx.Request)
 
-	st.Expect(t, err.Error(), "parse ://: missing protocol scheme")
+	st.Expect(t, err.Error(), `parse "://": missing protocol scheme`)
 }
 
 type handler struct {
