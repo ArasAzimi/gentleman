@@ -6,6 +6,12 @@ go:
   - "1.9"
   - tip
 
+# safelist
+branches:
+  only:
+  - master
+  - test
+
 before_install:
   - go get github.com/nbio/st
   - go get -u -v github.com/axw/gocov/gocov
